@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Todo List-Dashboard</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img id="logo" src="../assets/background.png" alt=""><b>Todo List</b></li>
+            <li class="textLi">Home</li>
+            <li class="textLi">About</li>
+            <li class="textLi">Services</li>
+            <button class="btn my-2" id="displayBtn" onclick="display()">Show my Tasks</button>
+            <button class="btn my-2" id="deleteAllItemsOfAUserBtn">Delete All Items</button>
+            <button class="btn my-2" id="logOutBtn">Log Out</button>
+        </ul>
+    </nav>
+    <div class="container my-5">
+        <form class="g-5">
+            <h1>Add Todo Item</h1>
+            <div class="alert alert-danger error" role="alert" id="emptyError">
+                A simple danger alert—check it out!
+            </div>
+            <div class="col-md-6">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title">
+                <div class="alert alert-danger error" role="alert" id="titleError">
+                    A simple danger alert—check it out!
+                </div>
+            </div>
+            <div class="col-md-6 my-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" rows="5"></textarea>
+                <div class="alert alert-danger error" role="alert" id="descError">
+                    A simple danger alert—check it out!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="priority" class="form-label">Priority</label>
+                <select id="priority" class="form-select">
+                    <option>Low</option>
+                    <option selected>Average</option>
+                    <option>High</option>
+                    <option>Very High</option>
+                </select>
+            </div>
+            <div class="col-md-6 mt-4">
+                <button type="submit" class="btn px-4" id="addBtn">Add</button>
+            </div>
+        </form>
+    </div>
+    <div class="footerContainer">
+        <div id="todoItemsContainer" class="container-fluid h-100">
+            <h1 class="text-center py-4">Your Todo Items</h1>
+            <div id="mainItems" class="row d-flex justify-content-center">
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../firebase-config.js" type="module"></script>
+    <script src="./dashboard.js" type="module"></script>
+</body>
+
+</html>

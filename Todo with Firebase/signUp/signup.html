@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <div class="container-fluid" id="main">
+    <div class="row">
+      <div class="col-md-6 col-sm-12" id="background">
+        <h1 class="text-center mt-5">Todo List</h1>
+      </div>
+      <div class="col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column">
+        <div class="d-flex align-items-center justify-content-center flex-column loginContainer px-4 py-3">
+          <h1 class="text-center mb-5 heading">Todo List</h1>
+          <i class="fa-solid fa-list mb-3" id="icon"></i>
+          <h1 class="text-center fw-bold">Sign Up</h1>
+          <div class="error" id="signedupSuccess">
+            <div class="alert alert-success" role="alert">
+              Signed Up Suuccesful
+            </div>
+          </div>
+          <form>
+            <div class="error" id="emptyError">
+              <div class="alert alert-danger" role="alert">
+                Fill all the information
+              </div>
+            </div>
+            <div class="error" id="maxLengthError">
+              <div class="alert alert-danger" role="alert">
+                User name, Password does not exceed more than 20 and Email 40 digits.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputUsername" class="form-label">User Name</label>
+              <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+              <div class="error" id="minUsernameError">
+                <div class="alert alert-danger" role="alert">
+                  User Name should be atleast 3 digits long
+                </div>
+              </div>
+              <div class="error" id="usernameOnlyNumError">
+                <div class="alert alert-danger" role="alert">
+                  User Name does not contain only Numbers
+                </div>
+              </div>
+              <div class="error" id="usernameSpecialCharError">
+                <div class="alert alert-danger" role="alert">
+                  User Name does not contain Special Characters
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <div class="error" id="emailError">
+                <div class="alert alert-danger" role="alert">
+                  Write Correct email
+                </div>
+              </div>
+              <div class="error" id="alreadyExsistError">
+                <div class="alert alert-danger" role="alert">
+                  User Already Exsist
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password">
+              <div class="error" id="lengthError">
+                <div class="alert alert-danger" role="alert">
+                  Password Must be atleast 7 digit long
+                </div>
+              </div>
+              <div class="error" id="spaceError">
+                <div class="alert alert-danger" role="alert">
+                  Password should not contain space
+                </div>
+              </div>
+              <div class="error" id="weakPassword">
+                <div class="alert alert-warning" role="alert">
+                  Weak Password
+                </div>
+              </div>
+              <div class="error" id="strongPassword">
+                <div class="alert alert-success" role="alert">
+                  Strong Password
+                </div>
+              </div>
+              <div class="error" id="averagePassword">
+                <div class="alert alert-primary" role="alert">
+                  Average Password
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="confirmPassword">
+              <div class="error" id="confirmPasswordError">
+                <div class="alert alert-danger" role="alert">
+                  Confirm Password must be same as Password
+                </div>
+              </div>
+            </div>
+            <button id="signupBtn" type="submit" class="btn btn-primary px-5 py-2">Sign Up</button>
+            <div class="mb-3">
+              Already have an account ? Click here to <a href="../index.html">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"></script>
+  <script src="../firebase-config.js" type="module"></script>
+  <script src="signup.js" type="module"></script>
+  
+</body>
+
+</html>

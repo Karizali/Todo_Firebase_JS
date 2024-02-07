@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+}
+.heading{
+    display: none;
+}
+#background {
+    min-height: 100vh;
+    max-height: 120vh;
+    flex-grow: 2;
+    background-image: url('../assets/background.png');
+    background-color: #DD62FF;
+    background-position: left;
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 35px rgb(73, 72, 72);
+}
+
+#icon {
+    font-size: 5em;
+}
+
+h1 {
+    color: whitesmoke;
+}
+
+.loginContainer {
+    background-color: #DD62FF;
+    border-radius: 15px;
+    color: whitesmoke;
+    box-shadow: 3px 3px 25px 1px rgb(109, 108, 108);
+
+}
+
+a {
+    color: whitesmoke;
+}
+
+#signupBtn {
+    background-color: #1CBDFF;
+    border: 1px solid #1CBDFF;
+}
+
+.error {
+    display: none;
+}
+
+@media (max-width:767px) {
+    #background {
+        display: none;
+    }
+
+    #main {
+        min-height: 100vh;
+        max-height: 120vh;
+        background-image: url('../assets/background.png');
+        background-color: #DD62FF;
+        background-position: left;
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginContainer {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(255, 255, 255,0.6);
+    }
+    .heading{
+        display: block;
+    }
+}
